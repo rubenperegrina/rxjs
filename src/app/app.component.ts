@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -23,9 +24,10 @@ import { Component } from '@angular/core';
         <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
       </li>
     </ul>
-    <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class AppComponent {
   title = 'rxjs';
